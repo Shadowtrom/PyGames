@@ -48,8 +48,8 @@ if os.path.isfile('save.txt'):
   price2txt = str(price2)
   price3txt = str(price3)
 
-  GITHUB_seeker1
-  GITHUB_seeker2
+  verify = clicks + value + price + price2 + price3 + knife + level * 13 - 3464
+  verify1 = clicks + value + price + price2 + price3 + knife + level * 21 + 9856
   if verify == verline1:
     if verify1 == verline2:
         yeah = 1
