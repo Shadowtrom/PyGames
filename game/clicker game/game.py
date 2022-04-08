@@ -24,7 +24,7 @@ levelwav = pygame.mixer.Sound('levelup.wav')
 errorwav = pygame.mixer.Sound('error.wav')
 savewav = pygame.mixer.Sound('save.wav')
 pygame.init()
-
+pygame.display.set_caption('pineapple clicker')
 # Set up the drawing window
 pygame.font.init() # you have to call this at the start, 
                    # if you want to use this module.
