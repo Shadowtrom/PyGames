@@ -9,26 +9,26 @@ if /I "%c%" EQU "ddc" goto :ddc
 goto :q
 
 :ddc
-cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Dog
+cd Dodgy Dog
 py.exe cheat.py
 goto :end
 
 :Dog
 
-cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Dog
+cd Dodgy Dog
 pause
 py.exe game.py
 goto :end
 
 :Clicker
 
-cd C:\Users\jackm\OneDrive\Desktop\game\clicker game
+cd clicker game
 pause
 py.exe game.py
 goto :end
 
 :Simon
-cd C:\Users\jackm\OneDrive\Desktop\game\simon says
+cd simon says
 pause
 py.exe game.py
 goto :end
