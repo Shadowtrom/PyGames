@@ -163,8 +163,10 @@ while running:
         helppro = 0
         helping = 'false'
         speed = speed - 0.075
+        print('-')
 
-
+      if speed <= 0:
+        speed = 0.0005
 
   if helping == 'true':
     if int(helpnum) == 1:
@@ -173,6 +175,7 @@ while running:
       pygame.draw.rect(screen, (255, 255, 255), (250, 0, 250, 250))
       pygame.display.flip()
       redwav.play()
+      print('red')
       time.sleep(speed)
       colorres()
       pygame.display.flip()
@@ -183,6 +186,7 @@ while running:
       pygame.draw.rect(screen, (255, 255, 255), (0, 0, 250, 250))
       pygame.display.flip()
       greenwav.play()
+      print('green')
       time.sleep(speed)
       colorres()
       pygame.display.flip()
@@ -193,6 +197,7 @@ while running:
       pygame.draw.rect(screen, (255, 255, 255), (0, 250, 250, 250))
       pygame.display.flip()
       yellowwav.play()
+      print('yellow')
       time.sleep(speed)
       colorres()
       pygame.display.flip()
@@ -203,13 +208,13 @@ while running:
       pygame.draw.rect(screen, (255, 255, 255), (250, 250, 250, 250))
       pygame.display.flip()
       bluewav.play()
+      print('blue')
       time.sleep(speed)
       colorres()
       pygame.display.flip()
       time.sleep(0.2)
 
-      if speed <= 0:
-        speed = 0.0005
+
 
 
 #num 1 is red
