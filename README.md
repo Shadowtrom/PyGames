@@ -68,6 +68,6 @@ pip install randint
 py -m pip install randint
 python.exe -m pip install randint
 
-
+_________________________________________________________________________________________________________________________________________________________________________________
 BE AWERE THE ART USED IN THE GAMES IS NOT MINE
 So beawere how you use
