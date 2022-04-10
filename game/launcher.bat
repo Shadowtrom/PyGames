@@ -40,6 +40,7 @@ py.exe game.py
 goto :end
 
 :end
+cd..
 set /P d=What wanna play more [y/n]:
 if /I "%d%" EQU "y" goto :q
 if /I "%d%" EQU "n" goto :stop
