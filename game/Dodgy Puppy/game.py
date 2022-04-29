@@ -4,7 +4,7 @@ from random import randint
 bombposx = randint(0, 450)
 import pygame, sys
 pygame.font.init()
-pygame.display.set_caption('Dodgy Dog')
+pygame.display.set_caption('Dodgy Puppy')
 img = pygame.image.load('background.png')
 dog = pygame.image.load('dog.png')
 dog2 = pygame.image.load('dog2.png')
@@ -51,17 +51,17 @@ screen.fill((white))
 running = 1
 pygame.event.pump()
 bombposx1 = randint(0, 450)
-bombhit1 = pygame.Rect(bombposx1, bombpos, 50, 75)
+bombhit1 = pygame.Rect(bombposx1, bombpos, 35, 55)
 bombposx2 = randint(0, 450)
-bombhit2 = pygame.Rect(bombposx2, bombpos, 50, 75)
+bombhit2 = pygame.Rect(bombposx2, bombpos, 35, 55)
 bombposx3 = randint(0, 450)
-bombhit3 = pygame.Rect(bombposx3, bombpos, 50, 75)
+bombhit3 = pygame.Rect(bombposx3, bombpos, 35, 55)
 bombposx4 = randint(0, 450)
-bombhit4 = pygame.Rect(bombposx4, bombpos, 50, 75)
+bombhit4 = pygame.Rect(bombposx4, bombpos, 35, 55)
 wallleft = pygame.Rect(0, 615, 1, 50)
-wallright = pygame.Rect(400, 615, 1, 50)
-dogbox = pygame.Rect(posx, 620, 90, 30)
-bombhit = pygame.Rect(bombposx, bombpos, 50, 75)
+wallright = pygame.Rect(500, 615, 1, 50)
+dogbox = pygame.Rect(posx, 630, 60, 40)
+bombhit = pygame.Rect(bombposx, bombpos, 35, 55)
 def chill_over(rect1, rect2):
     collide = rect1.colliderect(rect2)
     return True if collide else False
@@ -110,23 +110,23 @@ while running:
                 running = False
 
 
-    bombhit1 = pygame.Rect(bombposx1, bombpos, 50, 75)
-    bombhit2 = pygame.Rect(bombposx2, bombpos, 50, 75)
-    bombhit3 = pygame.Rect(bombposx3, bombpos, 50, 75)
-    bombhit4 = pygame.Rect(bombposx4, bombpos, 50, 75)    
-    bombhit = pygame.Rect(bombposx, bombpos, 50, 75)
+    bombhit1 = pygame.Rect(bombposx1, bombpos, 35, 55)
+    bombhit2 = pygame.Rect(bombposx2, bombpos, 35, 55)
+    bombhit3 = pygame.Rect(bombposx3, bombpos, 35, 55)
+    bombhit4 = pygame.Rect(bombposx4, bombpos, 35, 55)    
+    bombhit = pygame.Rect(bombposx, bombpos, 35, 55)
 
 
     key = pygame.key.get_pressed()
     if key[pygame.K_a]:
-        if is_over(wallleft, dogbox):
+        if chill_over(wallleft, dogbox):
             NULL
         else:
             posx = posx - speed
             dogc = dog2
     key = pygame.key.get_pressed()
     if key[pygame.K_d]:
-        if is_over(wallright, dogbox):
+        if chill_over(wallright, dogbox):
             NULL
         else:
             posx = posx + speed
@@ -148,7 +148,7 @@ while running:
         else:
             bombspeed = bombspeed + 0.1
         
-    screen.blit(dogc,(posx,610))
+    screen.blit(dogc,(posx,630))
     if stage == 1:
         if Hide == 0:
             screen.blit(cheat,(0,0))
@@ -241,21 +241,21 @@ while running:
                     pressedH = 1
                     Hide = 0
 
-    key = pygame.key.get_pressed()
-    if key[pygame.K_t]:
-        if pressedT == 0:
-            if stage == 0:
-                pressedT = 1
-                stage = 1
-            else:
-                pressedT = 1
-                stage = 0
-                Hide = 0
-                speed = 0.3
-                bombspeed = 0.3
-                bombamo = 0
-                GodMode = False
-                hitbox = False
+    #key = pygame.key.get_pressed()
+    #if key[pygame.K_t]:
+    #    if pressedT == 0:
+    #        if stage == 0:
+    #            pressedT = 1
+    #            stage = 1
+    #        else:
+    #            pressedT = 1
+    #            stage = 0
+    #            Hide = 0
+    #            speed = 0.3
+    #            bombspeed = 0.3
+    #            bombamo = 0
+    #            GodMode = False
+    #            hitbox = False
     if stage == 1:
         key = pygame.key.get_pressed()
         if key[pygame.K_1]:
@@ -350,7 +350,7 @@ while running:
     M = pygame.mouse.get_pos()
 
 
-    dogbox = pygame.Rect(posx, 620, 90, 50)
+    dogbox = pygame.Rect(posx, 630, 60, 40)
     if GodMode == False:
         if chill_over(bombhit, dogbox):
             print("Highscore:", score)
