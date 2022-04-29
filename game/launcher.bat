@@ -1,49 +1,56 @@
 ECHO OFF
 
 :q
-set /P c=What game you wanna play: [Dodgy dog:dd / Clicker game:cg / Clicker game (high res):cghr / Simon says:ss]?
+set /P c=What game you wanna play: [Dodgy Puppy:dp / Dodgy dog:dd / Clicker game:cg / Simon says:ss]?
 if /I "%c%" EQU "dd" goto :Dog
 if /I "%c%" EQU "cg" goto :Clicker
 if /I "%c%" EQU "ss" goto :Simon
 if /I "%c%" EQU "ddc" goto :ddc
-if /I "%c%" EQU "cghr" goto :cghr
+if /I "%c%" EQU "dpc" goto :dpc
+if /I "%c%" EQU "dp" goto :dp
 goto :q
 
-:cghr
-cd clicker game (High res)
-py.exe game.py
-goto :end
-
 :ddc
-cd Dodgy Dog
+cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Dog
 py.exe cheat.py
 goto :end
 
+:dpc
+cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Puppy
+py.exe cheat.py
+goto :end
+
+:dp
+cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Puppy
+py.exe game.py
+goto :end
+
+
 :Dog
 
-cd Dodgy Dog
+cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Dog
 pause
 py.exe game.py
 goto :end
 
 :Clicker
 
-cd clicker game
+cd C:\Users\jackm\OneDrive\Desktop\game\clicker game
 pause
 py.exe game.py
 goto :end
 
 :Simon
-cd simon says
+cd C:\Users\jackm\OneDrive\Desktop\game\simon says
 pause
 py.exe game.py
 goto :end
 
 :end
-cd..
 set /P d=What wanna play more [y/n]:
 if /I "%d%" EQU "y" goto :q
 if /I "%d%" EQU "n" goto :stop
+goto :end
 pause
 
 :stop
