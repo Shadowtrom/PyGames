@@ -1,13 +1,14 @@
 ECHO OFF
 
 :q
-set /P c=What game you wanna play: [Dodgy Puppy:dp / Dodgy dog:dd / Clicker game:cg / Simon says:ss]?
+set /P c=What game you wanna play: [Dodgy Puppy:dp / Dodgy dog:dd / Clicker game (high res):cghr / Clicker game:cg / Simon says:ss]?
 if /I "%c%" EQU "dd" goto :Dog
 if /I "%c%" EQU "cg" goto :Clicker
 if /I "%c%" EQU "ss" goto :Simon
 if /I "%c%" EQU "ddc" goto :ddc
 if /I "%c%" EQU "dpc" goto :dpc
 if /I "%c%" EQU "dp" goto :dp
+if /I "%c%" EQU "cghr" goto :cghr
 goto :q
 
 :ddc
@@ -32,6 +33,13 @@ cd C:\Users\jackm\OneDrive\Desktop\game\Dodgy Dog
 pause
 py.exe game.py
 goto :end
+
+:cghr
+cd C:\Users\jackm\OneDrive\Desktop\game\clicker game (High res)
+pause
+py.exe game.py
+goto :end
+
 
 :Clicker
 
