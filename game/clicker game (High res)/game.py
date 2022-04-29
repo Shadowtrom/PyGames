@@ -268,39 +268,40 @@ while running:
         if clicks >= price3:
           pygame.draw.rect(screen, (0, 255, 0), (buypizza))
           if googleV2 == 0:
-            clicks = clicks - price3
-            price3 = price3 + 500
-            verify = float(clicks) + value + price + price2 + price3 + knife + level + r + g + b * 13 - 3464
-            verify1 = float(clicks) + value + price + price2 + price3 + knife + level + r + g + b * 21 + 9856
-            with open("save.txt", "w") as file: # xyz.txt is filename, w means write format
-              file.write("save") # write text xyz in the file
-            f= open("save.txt", "w")
-            f.write(str(clicks))
-            f.write('\n')
-            f.write(str(value))
-            f.write('\n')
-            f.write(str(price))
-            f.write('\n')
-            f.write(str(price2))
-            f.write('\n')
-            f.write(str(price3))
-            f.write('\n')
-            f.write(str(knife))
-            f.write('\n')
-            f.write(str(level))
-            f.write('\n')
-            f.write(str(r))
-            f.write('\n')
-            f.write(str(g))
-            f.write('\n')
-            f.write(str(b))
-            f.write('\n')
-            f.write(str(verify))
-            f.write('\n')
-            f.write(str(verify1))
-            f.close()
-            if volume == True:
-              savewav.play() 
+              clicks = clicks - price3
+              googleV2 = 1
+              price3 = price3 + 500
+              verify = float(clicks) + value + price + price2 + price3 + knife + level + r + g + b * 13 - 3464
+              verify1 = float(clicks) + value + price + price2 + price3 + knife + level + r + g + b * 21 + 9856
+              with open("save.txt", "w") as file: # xyz.txt is filename, w means write format
+                file.write("save") # write text xyz in the file
+              f= open("save.txt", "w")
+              f.write(str(clicks))
+              f.write('\n')
+              f.write(str(value))
+              f.write('\n')
+              f.write(str(price))
+              f.write('\n')
+              f.write(str(price2))
+              f.write('\n')
+              f.write(str(price3))
+              f.write('\n')
+              f.write(str(knife))
+              f.write('\n')
+              f.write(str(level))
+              f.write('\n')
+              f.write(str(r))
+              f.write('\n')
+              f.write(str(g))
+              f.write('\n')
+              f.write(str(b))
+              f.write('\n')
+              f.write(str(verify))
+              f.write('\n')
+              f.write(str(verify1))
+              f.close()
+              if volume == True:
+                savewav.play() 
         else:
           pygame.draw.rect(screen, (255, 0, 0), (buypizza))
           googleV2 = 1
